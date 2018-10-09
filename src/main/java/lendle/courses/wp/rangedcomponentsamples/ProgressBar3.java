@@ -32,6 +32,7 @@ public class ProgressBar3 {
         ProgressMonitor progressBar=null;
         /////////////////////////
         Thread t=new Thread(){
+            @Override
             public void run(){
                 int i=0;
                 for(i=0; i<=100; i++){
@@ -44,6 +45,7 @@ public class ProgressBar3 {
                 }
             }
         };
+        t.setDaemon(true);
         t.start();
         
         frame.setVisible(true);
