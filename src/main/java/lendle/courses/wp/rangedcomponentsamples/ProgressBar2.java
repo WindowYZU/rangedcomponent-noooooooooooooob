@@ -36,6 +36,8 @@ public class ProgressBar2 {
             public void run(){
                 int i=0;
                 while(true){
+                    progressBar.setValue(i);
+                    i=(i+1)%100;
                     //累加 i 的值，顯示在 progressBar，注意超過100要拉回來
                     
                     ////////////////////////////////////////////////
